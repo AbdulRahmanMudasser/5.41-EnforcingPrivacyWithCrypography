@@ -33,5 +33,26 @@ class Cryptography
 
         // displaying encrypted number
         Console.WriteLine("Encrpyted Number: {0:D4}", encrypted);
+
+        // decryption
+        digit1 = ((encrypted / 1000) + 3) % 10;
+        digit2 = (((encrypted % 1000) / 100) + 3) % 10;
+        digit3 = (((encrypted % 100) / 10) + 3) % 10;
+        digit4 = ((encrypted % 10) + 3) % 10;
+
+        // swapping digit1 with digit3
+        temp = digit1;
+        digit1 = digit3;
+        digit3 = temp;
+
+        // swapping digit2 with digit4
+        temp = digit2;
+        digit2 = digit4;
+        digit4 = temp;
+
+        // combining digits to again make a four digit number
+        int decryption = (digit1 * 1000) + (digit2 * 100) + (digit3 * 10) + digit4;
+
+        Console.WriteLine("Decrypted Number: {0:D4}", decryption);
     }
 }
