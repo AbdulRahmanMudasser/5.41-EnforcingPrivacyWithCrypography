@@ -53,6 +53,7 @@ class Cryptography
         // combining digits to again make a four digit number
         int decryption = (digit1 * 1000) + (digit2 * 100) + (digit3 * 10) + digit4;
 
+        // displaying encrypted number
         Console.WriteLine("Decrypted Number: {0:D4}", decryption);
     }
 }
